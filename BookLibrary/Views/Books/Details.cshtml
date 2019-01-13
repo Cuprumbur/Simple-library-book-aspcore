@@ -4,10 +4,10 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
+<h2>Подробно</h2>
 
 <div>
-    <h4>Book</h4>
+    <h4>Книга</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -20,23 +20,23 @@
             @Html.DisplayNameFor(model => model.Preview)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Preview)
+            <img src="@Url.Content(Model.Preview)" alt="Image" />
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Author)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Author.AuthorId)
+            @Html.DisplayFor(model => model.Author.FullName)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Genre)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Genre.GenreId)
+            @Html.DisplayFor(model => model.Genre.Name)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.BookId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.BookId">Изменить</a> |
+    <a asp-action="Index">Назад к списку</a>
 </div>

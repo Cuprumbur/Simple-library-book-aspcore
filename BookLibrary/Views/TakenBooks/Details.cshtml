@@ -4,23 +4,23 @@
     ViewData["Title"] = "Details";
 }
 
-<h2>Details</h2>
+<h2>Подробно</h2>
 
 <div>
-    <h4>TakenBook</h4>
+    <h4>Запись учета книг</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Reader)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Reader.ReaderId)
+            @Html.DisplayFor(model => model.Reader.FullName)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Book)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Book.BookId)
+            @Html.DisplayFor(model => model.Book.Name)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.DateIssue)
@@ -43,6 +43,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.TakenBookId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.TakenBookId">Изменить</a> |
+    <a asp-action="Index">Назад к списку</a>
 </div>

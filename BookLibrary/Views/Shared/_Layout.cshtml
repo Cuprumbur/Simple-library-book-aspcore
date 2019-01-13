@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - BookLibrary</title>
+    <title>@ViewData["Title"] - Простейшая библиотека</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -26,16 +26,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="TakenBooks" asp-action="Index" class="navbar-brand">Taken Books</a>
+                <a asp-area="" asp-controller="TakenBooks" asp-action="Index" class="navbar-brand">Учет выданных книг</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Books" asp-action="Index">Books</a></li>
-                    <li><a asp-area="" asp-controller="Authors" asp-action="Index">Authors</a></li>
-                    <li><a asp-area="" asp-controller="Genres" asp-action="Index">Genres</a></li>
-                    <li><a asp-area="" asp-controller="Readers" asp-action="Index">Readers</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Books" asp-action="Index">Книги</a></li>
+                    <li><a asp-area="" asp-controller="Authors" asp-action="Index">Авторы</a></li>
+                    <li><a asp-area="" asp-controller="Genres" asp-action="Index">Жанры</a></li>
+                    <li><a asp-area="" asp-controller="Readers" asp-action="Index">Читатели</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">О программе</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Контакты</a></li>
                 </ul>
             </div>
         </div>
@@ -43,11 +43,11 @@
 
     <partial name="_CookieConsentPartial" />
 
-    <div class="container body-content">
+    <div class="container body-content"  >
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; 2019 - BookLibrary</p>
+        <footer >
+            <p style="text-align:center">&copy; 2019 - Простейшая библиотека</p>
         </footer>
     </div>
 

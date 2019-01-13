@@ -48,13 +48,13 @@ namespace BookLibrary.Controllers
         // GET: TakenBooks/Create
         public IActionResult Create()
         {
-            ViewData["BookId"] = new SelectList(_context.Books, "BookId", "BookId");
-            ViewData["ReaderId"] = new SelectList(_context.Readers, "ReaderId", "ReaderId");
+            ViewData["BookId"] = new SelectList(_context.Books, "BookId", "Name");
+            ViewData["ReaderId"] = new SelectList(_context.Readers, "ReaderId", "FullName");
             return View();
         }
 
         // POST: TakenBooks/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -84,13 +84,14 @@ namespace BookLibrary.Controllers
             {
                 return NotFound();
             }
-            ViewData["BookId"] = new SelectList(_context.Books, "BookId", "BookId", takenBook.BookId);
-            ViewData["ReaderId"] = new SelectList(_context.Readers, "ReaderId", "ReaderId", takenBook.ReaderId);
+
+            ViewData["BookId"] = new SelectList(_context.Books, "BookId", "Name");
+            ViewData["ReaderId"] = new SelectList(_context.Readers, "ReaderId", "FullName");
             return View(takenBook);
         }
 
         // POST: TakenBooks/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]

@@ -4,9 +4,9 @@
     ViewData["Title"] = "Create";
 }
 
-<h2>Create</h2>
+<h2>Создать</h2>
 
-<h4>Book</h4>
+<h4>Книга</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -24,21 +24,21 @@
             </div>
             <div class="form-group">
                 <label asp-for="Author" class="control-label"></label>
-                <select asp-for="AuthorId" class ="form-control" asp-items="ViewBag.AuthorId"></select>
+                <select asp-for="AuthorId" class="form-control" asp-items="ViewBag.Author"></select>
             </div>
             <div class="form-group">
-                <label asp-for="GenreId" class="control-label"></label>
-                <select asp-for="GenreId" class ="form-control" asp-items="ViewBag.GenreId"></select>
+                <label asp-for="Genre" class="control-label"></label>
+                <select asp-for="GenreId" class="form-control" asp-items="ViewBag.Genre"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Создать" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Назад к списку</a>
 </div>
 
 @section Scripts {
